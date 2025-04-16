@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#ABABAB"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:fontFamily="@font/black_ops_one"
+            android:gravity="center"
+            android:text="Carpentry Work Estimater"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvTaskSelect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="bottom|fill_horizontal"
+            android:text="Please select a Task to complete:"
+            android:textSize="22sp" />
+
+        <RadioGroup
+            android:id="@+id/taskRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbtnMeasure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Measure spaces/placements"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rbtnBuilding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build Shelf/Furniture/Doors"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rbtnFraming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Door frame size up"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rbtnInstalling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Install door/shelf/furniture"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rbtnGlossing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gloss furniture/doors/shelf (for shine)"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvMaterialSelect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="bottom|fill_horizontal"
+            android:text="Please select the needed material(s):"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/cbNails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nails (Cost: R150)"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/cbWood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wood (Cost: R500)"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/cbHinges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hinges (Cost: R100)"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/cbTools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tools (Hammer/Screwdrivers/Mallet/Sanders/Squares/etc.) [Cost: R700]"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/cbTape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Measuring Tape (Cost: R65)"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/cbCuttingTools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cutting Tools (Hand Saw/Circular Saw/Miter Saw) [Cost: R1200]"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etHours"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Enter the number of hours:" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0E70D1"
+            android:text="Calculate Total" />
+
+        <TextView
+            android:id="@+id/tvTotalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Estimates Cost: R0.00"
+            android:textSize="35dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</LinearLayout>
